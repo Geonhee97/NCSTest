@@ -1,0 +1,21 @@
+doctype html
+html(lang="ko")
+	head
+		title Student Score 
+		style.
+			form > div { border: 1px solid black; padding: 10px; }
+	body
+		form(action="/result", method="post")
+			-for(let i=1; i<=3; i++)
+				div
+					p
+						span Name : 
+						input(type="text" name=`name${i}`)
+					p
+						span Kor : 
+						input(type="text" name=`kor${i}`)
+						span  / Eng : 
+						input(type="text" name=`eng${i}`)
+						span  / Math : 
+						input(type="text" name=`math${i}`)
+			button(type="submit") Run
